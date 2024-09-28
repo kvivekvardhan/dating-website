@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon4-final2.png">
+    <title>LoveLink | Dating App</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- please place the login.json file in the same folder itself where login.html file is present -->
+</head>
+<body>
+    <div class="tagline">
+        <h1>- Love at first swipe</h1>
+    </div>
+    <!-- Header section with logo and navigation -->
+    <header class="header">
+        <a href="./login.html" class="logo">&#10084;Link</a>
+        <nav class="navbar">
+            <a href="./login.html">
+            <button id="btn">
+                <span class="span-mother">
+                    <!-- Animated button with "Find your Love" text -->
+                  <span>F</span>
+                  <span>i</span>
+                  <span>n</span>
+                  <span>d</span>
+                  <span>&nbsp;</span>
+                  <span>y</span>
+                  <span>o</span>
+                  <span>u</span>
+                  <span>r</span>
+                  <span>&nbsp;</span>
+                  <span>L</span>
+                  <span>o</span>
+                  <span>v</span>
+                  <span>e</span>
+                </span>
+                <span class="span-mother2">
+                  <span>L</span>
+                  <span>o</span>
+                  <span>v</span>
+                  <span>e</span>
+                  <span>L</span>
+                  <span>i</span>
+                  <span>n</span>
+                  <span>k</span>
+                </span>
+              </button>
+              </a>
+        </nav>
+    </header>
+    <!-- Container for login and signup forms -->
+<div class="container">
+    <div id="loginContainer">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="input-box">
+                <label for="username">Username:</label>
+                <input type="text" id="loginUsername" name="username" required autocomplete="off">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAiJJREFUWEft1j/IjWEYx/HP608GZFGIMCoTQmIwSDJYRAZJJtlEEQPK3zfJggySDAZioGTCQAYSUf6UwYBVERF5Lj3Hv845930/r/f0Jnc907mu6/c9v+d+fvfdZ4itviHG458CGostWIA5tdN3cQuH8aGJ+00dWoRzmNJB9AVW414pVBOghbiOkQmxcGgeHpVAlQKNwXNMzBR5ipn4kllfvKk34FTu8LpuOa7m9pQ6dAbrcofXdYewPbenFOgaluYOr+suY0VuTynQBazMHV7Xna+/uKy2UqCw/kDW5J9FkVVHcntKgaZWeygyZnimwGdMw+vM+uKvLOYew6ZMgf4qsbdl1n4vK3UoekbhCpYkhC5hVUkGNQWKvmHYir1tEvtd/dvJEmdatU0c+lVnNGZhNj7hPh5UufOxCcxAHGqql+wbqENJgdKCJkAz6gMzImBcB8G3eFlt6sd4UgKVCxSXsZ1YjwklAnUGncZ+vE/15gAtw1mMTw1L/P6mcmsNbnarSwFtxPGGedVO9yvW1rfNtlzdgOZWJ/vtKmtGDNCZP9sjEmJ225tkJ6C4nj7D9L8M0xr3sM6vcOy31Qkozp+DgwTTGhu3z9jsWUCvMGmQgSLVI+GTQPNxZ5BhWuMnI/78j9XulcWXdaJHQHH7vJgC2lGd4Pt6BLQZR1NAu7GrR0B7Kp3Q6/rKFiOeXqwblVY8XYF6AdJRI3V09BzuP1DK8m9Xs0gl5Tm5qgAAAABJRU5ErkJggg=="/>
+            </div>
+            <div class="input-box">
+                <label for="password">Password:</label>
+                <input type="password" id="loginPassword" name="password" required autocomplete="off">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAZVJREFUWEft1z1PVEEUxvHfhopeIVBaakwo/QCEkkBvYWFsLIxUgoTXIIkGE6OFiZWVndGS0PkJLCDQUPJiKOALqOyYKTare2fmsiZA7qk2d557zj/PnjN3puWSReuS8bhWQHfwCGMIv0Ns4zveY6+O+3UdWsE8PR3+iVm8KoWqA/QOjzMLLbd1S5naP7JSoIf40FHgG+awE5/dxUvc69BM4WsuVAnQQLtnDjEUk3/CffzqKhZ0nzEZn+/i9v8AGsdWTHyGWzjtUWgE+xiM6wEogCWjxKEZbMSMXzCdyL6Jiah5gI9JmsIeWmjrQ5OGeIHniQLreBY1YSLX+g0UpmUxJs2ZnlJ98ZSVFijVN0BZG2TVlIW10IxhVx7OacgMzQ+8rWrwKqDXeJpRpI5ktb2hhqn9K6qATnCjTrWMd44wWgr0OyPxRST/NKPKoQYo2N041NF0TQ+lJrBxqHEo5UBq/er30HEfjx3dbtX6uHYe0lP2l67XOn6E/zjcSp/gZmnFHvoDvKm685fcy/rEVJ2mAUrZfA6IjUolahCe8wAAAABJRU5ErkJggg=="/>
+            </div>
+            <!-- Output message will appear here -->
+            <p id="output"></p>
+            <button type="submit" id="loginButton">Login</button>
+        </form>
+        <!-- Links to forgot password and signup pages -->
+        <div class="remember-forgot"><p>
+            <a href="forgot.html">Forgot Password?</a>
+        </p></div>
+        <div class="register-link">
+        <p>
+            Don't have an account? <a style="cursor: pointer;">Sign up</a>
+        </p></div>
+    </div>
+    <!-- Signup form container -->
+<div id="signupContainer" style="display: none;">
+        <h2>Signup</h2>
+        <form id="signupForm" action="/signup" method="POST">
+            <!-- Input fields for username, password, security question, and security answer -->
+            <div class="input-box">
+                <label for="username">Username:</label>
+                <input type="text" id="signupUsername" name="username" required autocomplete="off">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAiJJREFUWEft1j/IjWEYx/HP608GZFGIMCoTQmIwSDJYRAZJJtlEEQPK3zfJggySDAZioGTCQAYSUf6UwYBVERF5Lj3Hv845930/r/f0Jnc907mu6/c9v+d+fvfdZ4itviHG458CGostWIA5tdN3cQuH8aGJ+00dWoRzmNJB9AVW414pVBOghbiOkQmxcGgeHpVAlQKNwXNMzBR5ipn4kllfvKk34FTu8LpuOa7m9pQ6dAbrcofXdYewPbenFOgaluYOr+suY0VuTynQBazMHV7Xna+/uKy2UqCw/kDW5J9FkVVHcntKgaZWeygyZnimwGdMw+vM+uKvLOYew6ZMgf4qsbdl1n4vK3UoekbhCpYkhC5hVUkGNQWKvmHYir1tEvtd/dvJEmdatU0c+lVnNGZhNj7hPh5UufOxCcxAHGqql+wbqENJgdKCJkAz6gMzImBcB8G3eFlt6sd4UgKVCxSXsZ1YjwklAnUGncZ+vE/15gAtw1mMTw1L/P6mcmsNbnarSwFtxPGGedVO9yvW1rfNtlzdgOZWJ/vtKmtGDNCZP9sjEmJ225tkJ6C4nj7D9L8M0xr3sM6vcOy31Qkozp+DgwTTGhu3z9jsWUCvMGmQgSLVI+GTQPNxZ5BhWuMnI/78j9XulcWXdaJHQHH7vJgC2lGd4Pt6BLQZR1NAu7GrR0B7Kp3Q6/rKFiOeXqwblVY8XYF6AdJRI3V09BzuP1DK8m9Xs0gl5Tm5qgAAAABJRU5ErkJggg=="/>
+            </div>
+            <p id="username-output" style="color: red; text-align: center; margin-bottom: 0; padding: 0;" ></p>
+            <div class="input-box">
+                <label for="password">Password:</label>
+                <input type="password" id="signupPassword" name="password" required autocomplete="off">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAZVJREFUWEft1z1PVEEUxvHfhopeIVBaakwo/QCEkkBvYWFsLIxUgoTXIIkGE6OFiZWVndGS0PkJLCDQUPJiKOALqOyYKTare2fmsiZA7qk2d557zj/PnjN3puWSReuS8bhWQHfwCGMIv0Ns4zveY6+O+3UdWsE8PR3+iVm8KoWqA/QOjzMLLbd1S5naP7JSoIf40FHgG+awE5/dxUvc69BM4WsuVAnQQLtnDjEUk3/CffzqKhZ0nzEZn+/i9v8AGsdWTHyGWzjtUWgE+xiM6wEogCWjxKEZbMSMXzCdyL6Jiah5gI9JmsIeWmjrQ5OGeIHniQLreBY1YSLX+g0UpmUxJs2ZnlJ98ZSVFijVN0BZG2TVlIW10IxhVx7OacgMzQ+8rWrwKqDXeJpRpI5ktb2hhqn9K6qATnCjTrWMd44wWgr0OyPxRST/NKPKoQYo2N041NF0TQ+lJrBxqHEo5UBq/er30HEfjx3dbtX6uHYe0lP2l67XOn6E/zjcSp/gZmnFHvoDvKm685fcy/rEVJ2mAUrZfA6IjUolahCe8wAAAABJRU5ErkJggg=="/>
+            </div>
+            <div class="input-box">
+                <label for="secqn" style="color: black;">Security Question:</label>
+                <div class="dropdown-box">
+                <select id="secqn" name="securityQuestion" required>
+                    <option value="What is the first name of your oldest cousin?">What is the first name of your oldest cousin?</option>
+                    <option value="What was the name of the street you grew up on?">What was the name of the street you grew up on?</option>
+                    <option value="What is the middle name of your youngest sibling?">What is the middle name of your youngest sibling?</option>
+                    <option value="What is the name of your favorite childhood toy?">What is the name of your favorite childhood toy?</option>
+                    <option value="What is the name of the hospital where you were born?">What is the name of the hospital where you were born?</option>
+                    <option value="What is the last name of your favorite fictional character?">What is the last name of your favorite fictional character?</option>
+                    <option value="What is the name of the town or city where your parents met?">What is the name of the town or city where your parents met?</option>
+                    <option value="What is the name of the company where you had your first job?">What is the name of the company where you had your first job?</option>
+                    <option value="What is the first name of your boss?">What is the first name of your boss?</option>
+                    <option value="What is the name of the first concert you attended?">What is the name of the first concert you attended?</option>
+                </select>
+                </div>
+            </div>
+            <div class="input-box">
+                <label for="secans">Security Answer:</label>
+                <input type="text" id="secans" name="securityAnswer" required autocomplete="off">
+            </div>
+            <button type="submit" id="signupButton">Signup</button>
+        </form>
+        <!-- Link to login page -->
+        <div class="register-link">
+            <p>
+                Already have an account? <a href="">Login</a>
+            </p></div>
+</div>
+        <!-- Output message will appear here -->
+    </div>
+    <script src="login.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>

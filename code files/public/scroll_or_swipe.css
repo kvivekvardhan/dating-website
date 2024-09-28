@@ -1,0 +1,414 @@
+.card {
+    --bg: #e8e8e8;
+    --contrast: #e2e0e0;
+    --grey: #93a1a1;
+    position: absolute;
+    align-items: center;
+    align-self: center;
+    margin-left: 14rem;
+    margin-right: auto;
+    height: 82%;
+    width: 60%;
+    padding: 9px;
+    background-color: var(--bg);
+    border-radius: 35px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+  
+  .card-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-conic-gradient(var(--bg) 0.0000001%, var(--grey) 0.000104%) 60% 60%/600% 600%;
+    filter: opacity(10%) contrast(105%);
+  }
+  
+  .card-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: var(--contrast);
+    border-radius: 30px;
+    /* Content style */
+    font-size: 20px;
+    font-weight: 900;
+    color: black;
+    text-align: center;
+    font-family: monospace;
+  }
+#profilesContainer img{
+    margin-top: 1%;
+    margin-bottom: -4%;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+}
+#profilesContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+.likemeter{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+
+.likemeter button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 25px 20px 22px;
+    box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: #e8e8e8;
+    border-color: #ffe2e2;
+    border-style: solid;
+    border-width: 9px;
+    border-radius: 35px;
+    font-size: 25px;
+    font-weight: 900;
+    color: rgb(134, 124, 124);
+    font-family: monospace;
+    transition: transform 400ms cubic-bezier(.68,-0.55,.27,2.5), 
+    border-color 400ms ease-in-out,
+    background-color 400ms ease-in-out;
+    word-spacing: -2px;
+  }
+  
+  @keyframes movingBorders {
+    0% {
+      border-color: #fce4e4;
+    }
+  
+    50% {
+      border-color: #ffd8d8;
+    }
+  
+    90% {
+      border-color: #fce4e4;
+    }
+  }
+  
+ .likemeter button:hover {
+    background-color: #eee;
+    transform: scale(105%);
+    animation: movingBorders 3s infinite;
+  }
+  
+ .likemeter button svg {
+    margin-right: 11px;
+    fill: rgb(255, 110, 110);
+    transition: opacity 100ms ease-in-out;
+  }
+  
+ .likemeter .filled {
+    position: absolute;
+    opacity: 0;
+    top: 20px;
+    left: 22px;
+  }
+  
+  @keyframes beatingHeart {
+    0% {
+      transform: scale(1);
+    }
+  
+    15% {
+      transform: scale(1.15);
+    }
+  
+    30% {
+      transform: scale(1);
+    }
+  
+    45% {
+      transform: scale(1.15);
+    }
+  
+    60% {
+      transform: scale(1);
+    }
+  }
+  
+ .likemeter button:hover .empty {
+    opacity: 0;
+  }
+  
+ .likemeter button:hover .filled {
+    opacity: 1;
+    animation: beatingHeart 1.2s infinite;
+  }
+
+.prevbtn{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+.nxbtn{
+    position: absolute;
+    top: 50%;
+    right: 13%;
+}
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(27, 27, 27);
+    padding: 10px 30px;
+    border: 1px solid;
+    border-radius: 1000px;
+    display: inline-block;
+    position: relative;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.btn:link,
+.btn:visited {
+    color: rgb(27, 27, 27);
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(27, 27, 27, .5);
+}
+
+.btn:active {
+    transform: translateY(-3px);
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    transition: all .3s;
+}
+
+.btn:hover::after {
+    background-color: rgb(0, 238, 255);
+    transform: scaleX(1.4) scaleY(1.5);
+    opacity: 0;
+}
+.lovelink {
+  position: absolute;
+  left: 3rem;
+  background: rgba(0,0,0,0);
+  font-size: 2rem;
+  color: #FF1493;
+  text-decoration: none;
+  font-weight: 700;
+}
+.lovelink a{
+  background: rgba(0,0,0,0);
+  color: #FF1493;
+  position: relative;
+  margin-left: -15px;
+
+}
+.logoutbtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0rem;
+  position: absolute;
+  right: 1rem;
+}
+.logoutbtn .Btn {
+  position: relative;
+  width: 120px;
+  height: 45px;
+  border-radius: 45px;
+  border: none;
+  background-color: rgb(151, 95, 255);
+  color: white;
+  box-shadow: 0px 10px 10px rgb(210, 187, 253) inset,
+  0px 5px 10px rgba(5, 5, 5, 0.212),
+  0px -10px 10px rgb(124, 54, 255) inset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoutbtn .Btn::before {
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  background-color: rgba(250, 250, 250, 0.678);
+  content: "";
+  filter: blur(1px);
+  top: 7px;
+  border-radius: 50%;
+}
+
+.logoutbtn .Btn::after {
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  background-color: rgba(250, 250, 250, 0.137);
+  content: "";
+  filter: blur(1px);
+  bottom: 7px;
+  border-radius: 50%;
+}
+
+.logoutbtn .Btn:hover {
+  animation: jello-horizontal 0.9s both;
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* Style for the container of the dropdown */
+.dropdown-box {
+  position: absolute;
+  right: 3rem;
+  top: 6rem;
+  display: inline-block;
+}
+
+/* Style for the select element */
+.dropdown-box select {
+  appearance: none; /* Remove default arrow icon */
+  -webkit-appearance: none; /* For older versions of webkit browsers */
+  -moz-appearance: none; /* For older versions of Firefox */
+  width: 150px; /* Adjust width as needed */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  outline: none; /* Remove outline on focus */
+}
+
+/* Style for the options */
+.dropdown-box option {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #fff; /* Background color of options */
+  color: #333; /* Text color of options */
+}
+
+/* Style for the dropdown arrow icon */
+.dropdown-box::after {
+  content: '\25BC'; /* Unicode character for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Hover effect for the dropdown */
+.dropdown-box:hover select {
+  border-color: black; /* Change border color on hover */
+}
+
+/* Focus effect for the dropdown */
+.dropdown-box select:focus {
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Add box shadow on focus */
+}
+.filteryear{
+  position: absolute;
+  right: 3rem;
+  top: 10rem;
+}
+.filteryear {
+  display: inline-block;
+  padding: 4px 8px;
+  border: 1px solid #4f4f4f;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  overflow: hidden;
+  font-size: 13.5px;
+  cursor: pointer;
+  color: black;
+  z-index: 1;
+}
+
+.filteryear:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.filteryear:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #39bda7;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.filteryear:hover {
+  color: #ffffff;
+  border: 1px solid #39bda7;
+}
+
+.filteryear:hover:before {
+  top: -35%;
+  background-color: #39bda7;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.filteryear:hover:after {
+  top: -45%;
+  background-color: #39bda7;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+

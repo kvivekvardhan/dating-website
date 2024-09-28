@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon4-final2.png">
+    <title>Your &#10084;Link</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            text-align: center;
+            padding: 20px;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 5px;
+        }
+        .lovelink{
+        position: absolute;
+        left: 3rem;
+        background: rgba(0,0,0,0);
+        font-size: 2rem;
+        color: #FF1493;
+        text-decoration: none;
+        font-weight: 700;
+        }
+        .lovelink a{
+            background: rgba(0,0,0,0);
+            color: #FF1493;
+            position: relative;
+            margin-left: -15px;
+
+        }
+        .logoutbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0rem;
+    position: absolute;
+    right: 1rem;
+}
+.logoutbtn .Btn {
+    position: relative;
+    width: 120px;
+    height: 45px;
+    border-radius: 45px;
+    border: none;
+    background-color: rgb(151, 95, 255);
+    color: white;
+    box-shadow: 0px 10px 10px rgb(210, 187, 253) inset,
+    0px 5px 10px rgba(5, 5, 5, 0.212),
+    0px -10px 10px rgb(124, 54, 255) inset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+ .logoutbtn .Btn::before {
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(250, 250, 250, 0.678);
+    content: "";
+    filter: blur(1px);
+    top: 7px;
+    border-radius: 50%;
+  }
+  
+ .logoutbtn .Btn::after {
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(250, 250, 250, 0.137);
+    content: "";
+    filter: blur(1px);
+    bottom: 7px;
+    border-radius: 50%;
+  }
+  
+ .logoutbtn .Btn:hover {
+    animation: jello-horizontal 0.9s both;
+  }
+  
+  @keyframes jello-horizontal {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+  
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+  
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+  
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+  
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  .scrswpbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0rem;
+    position: absolute;
+    bottom: 3%;
+    right: 42%;
+
+  }
+  .cssbuttons-io-button {
+    background: #a370f0;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+  }
+  
+  .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+    right: 0.3em;
+    transition: all 0.3s;
+  }
+  
+  .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+  }
+  
+  .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #7b52b9;
+  }
+  
+  .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+  }
+  
+  .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+  }
+  .flip-card {
+    position: absolute;
+    top: 6%;
+    right: 35%;
+    background-color: transparent;
+    width: 25rem;
+    height: 31rem;
+    perspective: 1000px;
+    font-family: sans-serif;
+  }
+  
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.0s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid coral;
+    border-radius: 1rem;
+  }
+  
+  .flip-card-front {
+    background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+       rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+    color: coral;
+  }
+  
+  .flip-card-back {
+    background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
+       bisque 40%, rgb(255, 185, 160) 78%);
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  .click-me {
+    background-color: transparent;
+    border: none;
+    color: coral;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: 900;
+    margin-top: 1em;
+  }
+  .email-input {
+ border: none;
+ border-radius: 15px;
+ padding: 15px;
+ background-color: #e8e8e8;
+ box-shadow: 6px 6px 12px #ffffff,
+             -6px -6px 12px #c5c5c5;
+ font-size: medium;
+ font-weight: bold;
+ max-width: 200px;
+ margin-top: 10px;
+}
+
+ .email-input:focus {
+ outline-color: white;
+ place-content: "Enter your message!";
+}
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  background-color: coral;
+  padding: 1em 2em;
+  border: 1px solid white;
+  border-radius: .6rem;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 2%;
+}
+
+button span:not(:nth-child(6)) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 30px;
+  width: 30px;
+  background-color: orange;
+  border-radius: 50%;
+  transition: .6s ease;
+}
+
+ button span:nth-child(6) {
+  position: relative;
+}
+
+button span:nth-child(1) {
+  transform: translate(-3.3em, -4em);
+}
+
+ button span:nth-child(2) {
+  transform: translate(-6em, 1.3em);
+}
+
+ button span:nth-child(3) {
+  transform: translate(-.2em, 1.8em);
+}
+
+button span:nth-child(4) {
+  transform: translate(3.5em, 1.4em);
+}
+
+button span:nth-child(5) {
+  transform: translate(3.5em, -3.8em);
+}
+
+button:hover span:not(:nth-child(6)) {
+  transform: translate(-50%, -50%) scale(4);
+  transition: 1.5s ease;
+}
+#match-details img{
+  border-radius: 50%;
+}
+  
+    </style>
+</head>
+
+<body>
+    <a href="./dating.html" class="lovelink">&#10084;Link</a>
+    <div class="logoutbtn">
+        <button type="button" onclick="window.location.href='login.html'" class="Btn">Logout</button>
+        </div>
+    <div class="container">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <p class="title">Want to know your match?</p>
+                <button class="click-me" id="clickButton">Click Me</button>
+                <audio id="clickSound"><source src="audios/click-me-twinkling-sound2.mp3" type="audio/mpeg">
+                  Your browser does not support the audio tag.
+                </audio>
+                <script>
+                  document.getElementById('clickButton').addEventListener('click', function() {
+                    var clickSound = document.getElementById('clickSound');
+                    clickSound.play();
+                  });
+                </script>
+              </div>
+              <div class="flip-card-back">
+                <p class="title" style="color: #ffebcd; margin-top: 5%; margin-bottom: -3%;">Your &#10084;link</p>
+                <p id="match-details">
+                  <div class="send-email">
+                    <input type="text" id="emailMessage" placeholder="Type your message here!" class="email-input">
+                    <br>
+                <div class="sendEmailBtn">
+                  <button id="sendEmailBtn" >
+                    <span class="circle1"></span>
+                    <span class="circle2"></span>
+                    <span class="circle3"></span>
+                    <span class="circle4"></span>
+                    <span class="circle5"></span>
+                    <span class="text">Send Email</span>
+                  </button>
+                </div>
+                </div>
+                </p>
+              </div>
+            </div>
+          </div>  
+        <h2></h2>
+    </div>
+    <div class="scrswpbtn">
+        <button type="button" onclick="window.location.href='scroll_or_swipe.html'" class="cssbuttons-io-button">
+            More profiles await
+            <div class="icon">
+              <svg
+                height="24"
+                width="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+    <script>
+        // Retrieve the best match details from localStorage
+        const matchDetails = JSON.parse(localStorage.getItem('bestMatch'));
+        // Display the best match details in the p element
+        const matchDetailsElement = document.getElementById('match-details');
+        
+        if (matchDetails) {
+            // Create a string with the best match details
+            const details = `
+                <img src="./${matchDetails.Photo}" alt="Profile Picture" width="200" height="200"><br>
+                Name: ${matchDetails.Name}<br>
+                Roll Number: ${matchDetails.rollNumber}<br>
+                Year of Study: ${matchDetails.yearOfStudy}<br>
+                Age: ${matchDetails.age}<br>
+                Email: ${matchDetails.email}<br>
+                Interests: ${matchDetails.interests}<br>
+                Hobbies: ${matchDetails.hobbies}
+            `;
+            matchDetailsElement.innerHTML = details;
+        } else {
+            matchDetailsElement.textContent = 'No match details found.';
+        }
+    </script>
+    <script>
+        const flipCard = document.querySelector('.flip-card');
+        const clickMe = document.querySelector('.click-me');
+
+        clickMe.addEventListener('click', () => {
+        flipCard.classList.toggle('flipped');
+        });
+    </script>
+    <script>
+      // Event listener for sending email button click
+      document.getElementById('sendEmailBtn').addEventListener('click', function() {
+          // Retrieve the email of the best match from localStorage
+          const bestMatchEmail = JSON.parse(localStorage.getItem('bestMatch')).email;
+          // Retrieve the message input
+          const message = document.getElementById('emailMessage').value;
+  
+          // Check if email and message are not empty
+          if (bestMatchEmail && message) {
+              // Construct the mailto link
+              const subject = encodeURIComponent("A message from your match!");
+              const body = encodeURIComponent(message);
+              const mailtoLink = `mailto:${bestMatchEmail}?subject=${subject}&body=${body}`;
+  
+              // Open the mail client
+              window.location.href = mailtoLink;
+          } else {
+              alert('Please enter a message before sending.');
+          }
+      });
+      </script>
+      
+</html>

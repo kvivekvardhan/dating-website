@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon4-final2.png">
+    <title>Forgot Password? | Love Link</title>
+    <link rel="stylesheet" href="forgot.css"> 
+</head>
+
+<body>
+    <!-- Container element to hold the entire forgot password form -->
+    <div class="container">
+        <!-- Card shadow effect to give the form a 3D appearance -->
+        <div class="card-shadow">
+            <!-- Link to the login page with a heart symbol -->
+            <h1 style="text-align: center; color: hotpink;"><a href="login.html" style="text-decoration: none; color: hotpink;">&#10084;Link</a></h1>
+            <!-- Header indicating the purpose of the form -->
+            <h2>Forgot Password?</h2>
+            <!-- Section to input username -->
+            <div class="usernamebtn">
+                <!-- Input container to hold the username input field -->
+                <div class="InputContainer">
+                    <!-- Label for the username input field (not displayed) -->
+                    <label for="username"></label>
+                    <!-- Input field to enter the username -->
+                    <input type="text" name="username" class="input" id="username" placeholder="Enter your username">
+                </div>
+            </div>
+            <!-- Section to display security question (hidden by default) -->
+            <div id="security-question-section" style="display: none;">
+                <!-- Label for the security question -->
+                <label for="security-question">Security Question:</label>
+                <!-- Paragraph to display the security question -->
+                <p id="sec-qn"></p>
+                <!-- Input field to enter the security answer -->
+                <input type="text" autocomplete="off" name="security-question" id="security-answer" class="sec-ans" placeholder="Enter your answer">
+                <br>
+                <!-- Button to verify the security answer -->
+                <button class="full-rounded" id="verify-button">
+                    <span>Verify</span>
+                    <!-- Border effect for the button -->
+                    <div class="border full-rounded"></div>
+                </button>
+            </div>
+            <!-- Button to submit the username -->
+            <div class="submitbtn">
+                <button id="submit-username">Submit</button>
+            </div>
+            <!-- Paragraph to display output messages -->
+            <p id="output"></p>
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="forgot.js"></script>
+</body>
+
+</html>

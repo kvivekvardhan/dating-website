@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Define the character encoding and set the favicon -->
+  <meta charset="UTF-8">
+  <link rel="icon" href="images/icon4-final2.png">
+  
+  <!-- Set the viewport to make the page responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Set the title of the page -->
+  <title>Swipe Profiles | &#10084;Link</title>
+  
+  <!-- Link to the external stylesheet -->
+  <link rel="stylesheet" href="scroll_or_swipe.css">
+</head>
+
+<body>
+  <!-- Container element for the entire page -->
+  <div class="container">
+    <!-- Logout button -->
+    <div class="logoutbtn">
+      <button type="button" onclick="window.location.href='login.html'" class="Btn">Logout</button>
+    </div>
+    
+    <!-- Link to the dating page -->
+    <a href="./dating.html" class="lovelink">&#10084;Link</a>
+    
+    <!-- Dropdown box for filtering by gender -->
+    <div class="dropdown-box">
+      <select id="genderFilter">
+        <option value="all">All</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    
+    <!-- Button to filter profiles by year of study -->
+    <button id="filterByYearButton" class="filteryear">Filter by Year of Study</button>
+    
+    <!-- Heading for the swipe through profiles section -->
+    <h2 style="text-align: center;">Swipe Through Profiles</h2>
+    
+    <!-- Container for the profiles -->
+    <div class="card">
+      <div class="card-overlay"></div>
+      <div class="card-inner">
+        <!-- Container for the individual profiles -->
+        <div id="profilesContainer"></div>
+      </div>
+    </div>
+    
+    <!-- Container for the navigation buttons -->
+    <div id="navigationContainer">
+      <!-- Previous button -->
+      <div class="prevbtn">
+        <button id="prevButton" class="btn">&#x2190;</button>
+      </div>
+      
+      <!-- Next button -->
+      <div class="nxbtn">
+        <button id="nextButton" class="btn">&#x2192;</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Add an event listener to the document to wait for the DOM to load
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialize an empty array to store the profiles data
+      let profilesData = [];
+      
+      // Initialize the current profile index to 0
+      let currentProfileIndex = 0;
+      
+      // Initialize an empty array to store the filtered profiles
+      let filteredProfiles = [];
+
+      // Fetch the students.json file
+      fetch('./students.json')
+       .then(response => response.json())
+       .then(data => {
+          // Store the fetched data in the profilesData array
+          profilesData = data;
+          
+          // Initialize the filteredProfiles array with the entire dataset
+          filteredProfiles = profilesData;
+          
+          // Display the first profile
+          displayProfile(currentProfileIndex);
+        })
+       .catch(error => {
+          // Handle any errors that occur during the fetch operation
+          console.error('Error fetching students.json:', error);
+          alert('An error occurred. Please try again later.');
+        });
+
+      // Function to display a profile at a given index
+      function displayProfile(index) {
+        // Get the container element for the profiles
+        const profilesContainer = document.getElementById('profilesContainer');
+        
+        // Clear the container element
+        profilesContainer.innerHTML = '';
+
+        // Check if there are no profiles to display
+        if (filteredProfiles.length === 0) {
+          profilesContainer.textContent = "No profiles found.";
+          return;
+        }
+
+        // Get the profile at the given index
+        const profile = filteredProfiles[index];
+
+        // Create a new div element for the profile card
+        const profileCard = document.createElement('div');
+        profileCard.classList.add('profile-card');
+
+        // Create an img element for the profile photo
+        const imgElement = document.createElement('img');
+        imgElement.src = profile.Photo;
+        imgElement.alt = `${profile.Name}'s photo`;
+        profileCard.appendChild(imgElement);
+
+        // Create an h3 element for the profile name
+        const nameElement = document.createElement('h3');
+        nameElement.textContent = profile.Name;
+        profileCard.appendChild(nameElement);
+
+        // Create a p element for the profile details
+        const detailsElement = document.createElement('p');
+        detailsElement.innerHTML = `
+          Interests: ${profile.Interests.join(', ')},
+          <br>
+          Hobbies: ${profile.Hobbies.join(', ')} <br>
+          Roll Number: ${profile['IITB Roll Number']}
+          <br>
+          ${profile['Year of Study']} Year<br>
+          Age: ${profile.Age}<br>
+          Email: ${profile.Email}<br>
+        `;
+        profileCard.appendChild(detailsElement);
+
+        // Add the profile card to the container element
+        profilesContainer.appendChild(profileCard);
+      }
+
+      // Add an event listener to the previous button
+      document.getElementById('prevButton').addEventListener('click', function () {
+        // Decrement the current profile index
+        currentProfileIndex--;
+
+        // Check if the index is out of bounds and wrap around to the end
+        if (currentProfileIndex < 0) {
+          currentProfileIndex = filteredProfiles.length - 1;
+        }
+
+        // Display the previous profile
+        displayProfile(currentProfileIndex);
+      });
+
+      // Add an event listener to the next button
+      document.getElementById('nextButton').addEventListener('click', function () {
+        // Increment the current profile index
+        currentProfileIndex++;
+
+        // Check if the index is out of bounds and wrap around to the start
+        if (currentProfileIndex >= filteredProfiles.length) {
+          currentProfileIndex = 0;
+        }
+
+        // Display the next profile
+        displayProfile(currentProfileIndex);
+      });
+
+      // Add an event listener to the gender filter dropdown
+      const genderFilter = document.getElementById("genderFilter");
+      genderFilter.addEventListener("change", function () {
+        // Reset the current profile index
+        currentProfileIndex = 0;
+
+        // Get the selected gender from the dropdown
+        const selectedGender = genderFilter.value.toLowerCase();
+
+        // Filter the profiles based on the selected gender
+        if (selectedGender!== "all") {
+          filteredProfiles = profilesData.filter(profile => profile.Gender.toLowerCase() === selectedGender);
+        } else {
+          filteredProfiles = profilesData;
+        }
+
+        // Display the first profile in the filtered list
+        displayProfile(currentProfileIndex);
+      });
+
+      // Add an event listener to the filter by year of study button
+      let ascendingOrder = true;
+      document.getElementById('filterByYearButton').addEventListener('click', function () {
+        // Toggle the sorting order
+        if (ascendingOrder) {
+          // Sort the profiles in ascending order by year of study
+          filteredProfiles.sort((a, b) => parseInt(a['Year of Study']) - parseInt(b['Year of Study']));
+        } else {
+          // Sort the profiles in descending order by year of study
+          filteredProfiles.sort((a, b) => parseInt(b['Year of Study']) - parseInt(a['Year of Study']));
+        }
+
+        // Toggle the sorting order flag
+        ascendingOrder =!ascendingOrder;
+
+        // Reset the current profile index
+        currentProfileIndex = 0;
+
+        // Display the first profile in the sorted list
+        displayProfile(currentProfileIndex);
+      });
+    });
+  </script>
+</body>
+</html>

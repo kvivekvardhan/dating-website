@@ -1,0 +1,56 @@
+[
+  {
+    "username": "raju1990",
+    "password": "raju@123",
+    "secret_question": "What is your mother's maiden name?",
+    "secret_answer": "Patel"
+  },
+  {
+    "username": "meena_sharma",
+    "password": "meena@2022",
+    "secret_question": "What is your favorite childhood nickname?",
+    "secret_answer": "Mona"
+  },
+  {
+    "username": "amit_delhi",
+    "password": "amit1234",
+    "secret_question": "What is your favorite food?",
+    "secret_answer": "Paneer Tikka"
+  },
+  {
+    "username": "deepa_mumbai",
+    "password": "deepa@789",
+    "secret_question": "What is the name of your first pet?",
+    "secret_answer": "Tommy"
+  },
+  {
+    "username": "arjun_bangalore",
+    "password": "arjun@567",
+    "secret_question": "What is your favorite holiday destination?",
+    "secret_answer": "Goa"
+  },
+  {
+    "username": "vivek",
+    "password": "vivek@123",
+    "secret_question": "What is the first name of your oldest cousin?",
+    "secret_answer": "buddi"
+  },
+  {
+    "username": "gopi",
+    "password": "gopi@123",
+    "secret_question": "What is the middle name of your youngest sibling?",
+    "secret_answer": "banda"
+  },
+  {
+    "username": "vivek vardhan",
+    "password": "vardha@01",
+    "secret_question": "What is the name of the hospital where you were born?",
+    "secret_answer": "JRG"
+  },
+  {
+    "username": "chintu",
+    "password": "chintu@123",
+    "secret_question": "What is the first name of your oldest cousin?",
+    "secret_answer": "vivek"
+  }
+]

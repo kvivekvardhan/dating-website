@@ -1,0 +1,191 @@
+[
+    {
+        "IITB Roll Number": "2023001",
+        "Name": "Aryan Sharma",
+        "Year of Study": "3rd",
+        "Age": 21,
+        "Gender": "Male",
+        "Interests": ["Traveling", "Music"],
+        "Hobbies": ["Reading", "Playing musical instruments"],
+        "Email": "aryan@example.com",
+        "Photo": "photos/aryan_sharma.png"
+    },
+    {
+        "IITB Roll Number": "2023002",
+        "Name": "Aditi Singh",
+        "Year of Study": "2nd",
+        "Age": 20,
+        "Gender": "Female",
+        "Interests": ["Movies", "Art"],
+        "Hobbies": ["Cooking", "Painting"],
+        "Email": "aditi@example.com",
+        "Photo": "photos/aditi_singh.png"
+    },
+    {
+        "IITB Roll Number": "2023003",
+        "Name": "Rahul Patel",
+        "Year of Study": "4th",
+        "Age": 22,
+        "Gender": "Male",
+        "Interests": ["Technology", "Sports"],
+        "Hobbies": ["Coding", "Watching YouTube/Instagram"],
+        "Email": "rahul@example.com",
+        "Photo": "photos/rahul_patel.png"
+    },
+    {
+        "IITB Roll Number": "2023004",
+        "Name": "Sneha Desai",
+        "Year of Study": "1st",
+        "Age": 19,
+        "Gender": "Female",
+        "Interests": ["Literature", "Fashion"],
+        "Hobbies": ["Gardening", "Painting"],
+        "Email": "sneha@example.com",
+        "Photo": "photos/sneha_desai.png"
+    },
+    {
+        "IITB Roll Number": "2023005",
+        "Name": "Rohan Gupta",
+        "Year of Study": "3rd",
+        "Age": 21,
+        "Gender": "Male",
+        "Interests": ["Movies", "Technology"],
+        "Hobbies": ["Playing musical instruments", "Watching YouTube/Instagram"],
+        "Email": "rohan@example.com",
+        "Photo": "photos/rohan_gupta.jpg"
+    },
+    {
+        "IITB Roll Number": "2023006",
+        "Name": "Neha Reddy",
+        "Year of Study": "4th",
+        "Age": 22,
+        "Gender": "Female",
+        "Interests": ["Art", "Music"],
+        "Hobbies": ["Reading", "Painting"],
+        "Email": "neha@example.com",
+        "Photo": "photos/neha_reddy.png"
+    },
+    {
+        "IITB Roll Number": "2023007",
+        "Name": "Vivek Kumar",
+        "Year of Study": "2nd",
+        "Age": 20,
+        "Gender": "Male",
+        "Interests": ["Sports", "Technology"],
+        "Hobbies": ["Coding", "Watching YouTube/Instagram"],
+        "Email": "vivek@example.com",
+        "Photo": "photos/vivek_kumar.jpg"
+    },
+    {
+        "IITB Roll Number": "2023008",
+        "Name": "Priya Verma",
+        "Year of Study": "3rd",
+        "Age": 21,
+        "Gender": "Female",
+        "Interests": ["Traveling", "Literature"],
+        "Hobbies": ["Reading", "Photography"],
+        "Email": "priya@example.com",
+        "Photo": "photos/priya_verma.jpg"
+    },
+    {
+        "IITB Roll Number": "2023009",
+        "Name": "Aman Joshi",
+        "Year of Study": "2nd",
+        "Age": 20,
+        "Gender": "Male",
+        "Interests": ["Movies", "Music"],
+        "Hobbies": ["Playing musical instruments", "Watching YouTube/Instagram"],
+        "Email": "aman@example.com",
+        "Photo": "photos/aman_joshi.png"
+    },
+    {
+        "IITB Roll Number": "2023010",
+        "Name": "Rhea Kapoor",
+        "Year of Study": "1st",
+        "Age": 19,
+        "Gender": "Female",
+        "Interests": ["Fashion", "Art"],
+        "Hobbies": ["Painting", "Cooking"],
+        "Email": "rhea@example.com",
+        "Photo": "photos/rhea_kapoor.jpg"
+    },
+    {
+        "IITB Roll Number": "2023011",
+        "Name": "Mohit Chandra",
+        "Year of Study": "4th",
+        "Age": 22,
+        "Gender": "Other",
+        "Interests": ["Technology", "Sports"],
+        "Hobbies": ["Coding", "Playing musical instruments"],
+        "Email": "mohit@example.com",
+        "Photo": "photos/mohit_chandra.png"
+    },
+    {
+        "IITB Roll Number": "2023012",
+        "Name": "Ananya Patel",
+        "Year of Study": "3rd",
+        "Age": 21,
+        "Gender": "Female",
+        "Interests": ["Traveling", "Fashion"],
+        "Hobbies": ["Gardening", "Reading"],
+        "Email": "ananya@example.com",
+        "Photo": "photos/ananya_patel.jpg"
+    },
+    {
+        "IITB Roll Number": "2023013",
+        "Name": "Karan Mehta",
+        "Year of Study": "3rd",
+        "Age": 21,
+        "Gender": "Male",
+        "Interests": ["Sports", "Movies"],
+        "Hobbies": ["Watching YouTube/Instagram", "Coding"],
+        "Email": "karan@example.com",
+        "Photo": "photos/karan_mehta.jpg"
+    },
+    {
+        "IITB Roll Number": "2023014",
+        "Name": "Sara Khan",
+        "Year of Study": "1st",
+        "Age": 19,
+        "Gender": "Female",
+        "Interests": ["Art", "Literature"],
+        "Hobbies": ["Painting", "Reading"],
+        "Email": "sara@example.com",
+        "Photo": "photos/sara_khan.png"
+    },
+    {
+        "IITB Roll Number": "2023015",
+        "Name": "Ravi Malhotra",
+        "Year of Study": "2nd",
+        "Age": 20,
+        "Gender": "Male",
+        "Interests": ["Traveling", "Technology"],
+        "Hobbies": ["Photography", "Coding"],
+        "Email": "ravi@example.com",
+        "Photo": "photos/ravi_malhotra.jpg"
+    },
+    {
+        "IITB Roll Number": "2023016",
+        "Name": "Naina Joshi",
+        "Year of Study": "3rd",
+        "Age": 21,
+        "Gender": "Female",
+        "Interests": ["Fashion", "Music"],
+        "Hobbies": ["Cooking", "Playing musical instruments"],
+        "Email": "naina@example.com",
+        "Photo": "photos/naina_joshi.png"
+    },
+    {
+        "IITB Roll Number": "2023017",
+        "Name": "Yash Thakur",
+        "Year of Study": "4th",
+        "Age": 22,
+        "Gender": "Other",
+        "Interests": ["Sports", "Movies"],
+        "Hobbies": ["Watching YouTube/Instagram", "Gardening"],
+        "Email": "yash@example.com",
+        "Photo": "photos/yash_thakur.jpg"
+    }
+]
+
+

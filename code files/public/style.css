@@ -1,0 +1,637 @@
+body{
+    text-align: center;
+}
+.inputbox {
+    margin-top: 1%;
+    border: 2px solid transparent;
+    width: 15em;
+    height: 2.5em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    transition: all 0.5s;
+  }
+  
+  .inputbox:hover,
+  .inputbox:focus {
+    border: 2px solid #4A9DEC;
+    box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+    background-color: white;
+  }
+  
+
+.radio-input {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    scale: 0.7;
+  }
+  
+  .radio-input input {
+    height: 100px;
+    width: 100px;
+    translate: 0px 55px;
+    opacity: 0;
+    z-index: 10;
+  }
+  
+  .radio-input .card {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid darkgray;
+    background-color: lightgray;
+    border-radius: 10px;
+    translate: 0px -55px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+    color: darkgray;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    translate: -50% 0px;
+  }
+  
+  .card .title {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    font-size: 23px;
+    bottom: 0px;
+    font-weight: bold;
+  }
+  
+  .i_female:hover ~ .female {
+    filter: brightness(1.1);
+  }
+  
+  .i_male:hover ~ .male {
+    filter: brightness(1.1);
+  }
+  
+  .i_no-gender:hover ~ .no-gender {
+    filter: brightness(1.1);
+  }
+  
+  .i_female:checked ~ .female {
+    border: solid #ff87bf;
+    color: #ff87bf;
+    background-color: #ffb8d9;
+  }
+  
+  .i_male:checked ~ .male {
+    border: solid #3d44ff;
+    color: #3d44ff;
+    background-color: #85a5ff;
+  }
+  
+  .i_no-gender:checked ~ .no-gender {
+    border: solid #c9c600;
+    color: #c9c600;
+    background-color: #fffd82;
+  }
+  .radio-input input[type="radio"] {
+    display: none; /* Hide the radio buttons */
+}
+
+/* Hide the default checkbox */
+.interestbtn .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+.interestbtn .container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 1rem;
+    user-select: none;
+  }
+  
+  /* Create a custom checkbox */
+.interestbtn  .checkmark {
+    --clr: #0B6E4F;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: 300ms;
+  }
+.interestbtn .checkmark label{
+    padding-top: 0.4rem;
+    padding-left: 1.7rem;
+}
+  
+  /* When the checkbox is checked, add a blue background */
+.interestbtn .container input:checked ~ .checkmark {
+    background-color: var(--clr);
+    border-radius: .5rem;
+    animation: pulse 500ms ease-in-out;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+.interestbtn .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+.interestbtn .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+.interestbtn .container .checkmark:after {
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border: solid #E0E0E2;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 #0B6E4F90;
+      rotate: 20deg;
+    }
+  
+    50% {
+      rotate: -20deg;
+    }
+  
+    75% {
+      box-shadow: 0 0 0 10px #0B6E4F60;
+    }
+  
+    100% {
+      box-shadow: 0 0 0 13px #0B6E4F30;
+      rotate: 0;
+    }
+  }
+
+.interests{
+    display: flex;   
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+.checkbox-wrapper-46 input[type="checkbox"] {
+    display: none;
+    visibility: hidden;
+  }
+  
+  .checkbox-wrapper-46 .cbx {
+    margin: auto;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+  }
+  .checkbox-wrapper-46 .cbx span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+  }
+  .checkbox-wrapper-46 .cbx span:first-child {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    transform: scale(1);
+    vertical-align: middle;
+    border: 1px solid #9098a9;
+    transition: all 0.2s ease;
+  }
+  .checkbox-wrapper-46 .cbx span:first-child svg {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
+  }
+  .checkbox-wrapper-46 .cbx span:first-child:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #506eec;
+    display: block;
+    transform: scale(0);
+    opacity: 1;
+    border-radius: 50%;
+  }
+  .checkbox-wrapper-46 .cbx span:last-child {
+    padding-left: 8px;
+  }
+  .checkbox-wrapper-46 .cbx:hover span:first-child {
+    border-color: #506eec;
+  }
+  
+  .checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child {
+    background: #506eec;
+    border-color: #506eec;
+    animation: wave-46 0.4s ease;
+  }
+  .checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child svg {
+    stroke-dashoffset: 0;
+  }
+  .checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child:before {
+    transform: scale(3.5);
+    opacity: 0;
+    transition: all 0.6s ease;
+  }
+  
+  @keyframes wave-46 {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+  .hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+.input-container {
+    position: relative;
+    margin: 50px auto;
+    height: 10%;
+    width: auto;
+    max-width: 30%;
+  }
+  
+  .input-container input[type="email"] {
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+  }
+  
+  .input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ccc;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .input-container input[type="email"]:focus ~ .label,
+  .input-container input[type="email"]:valid ~ .label {
+    top: -20px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #333;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+  }
+  
+  .input-container input[type="email"]:focus ~ .underline,
+  .input-container input[type="email"]:valid ~ .underline {
+    transform: scaleX(1);
+  }
+
+  .custum-file-upload {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #cacaca;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 48px 35px -48px rgba(0,0,0,0.1);
+  }
+  
+  .custum-file-upload .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custum-file-upload .icon svg {
+    height: 80px;
+    fill: rgba(75, 85, 99, 1);
+  }
+  
+  .custum-file-upload .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custum-file-upload .text span {
+    font-weight: 400;
+    color: rgba(75, 85, 99, 1);
+  }
+  
+  .custum-file-upload input {
+    display: none;
+  }
+.imupl{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.submitbtn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 30%;
+    position: relative;
+    margin-top: -1.7rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 0;
+    box-shadow: hsl(210deg 87% 36%) 0px 7px 0px 0px;
+    background-color: hsl(210deg 100% 44%);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 31ms cubic-bezier(.5, .7, .4, 1);
+   }
+.submitbtn button:before {
+    content: attr(alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 4px;
+    opacity: 1;
+   }
+   
+  .submitbtn button:active {
+    box-shadow: none;
+    transform: translateY(7px);
+    transition: 35ms cubic-bezier(.5, .7, .4, 1);
+   }
+   
+ .submitbtn  button:hover:before {
+    transition: all .0s;
+    transform: translateY(100%);
+    opacity: 0;
+   }
+   
+  .submitbtn button i {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-style: normal;
+    transition: all 2s ease;
+    transform: translateY(-20px);
+    opacity: 0;
+   }
+   
+  .submitbtn button:hover i {
+    transition: all .2s ease;
+    transform: translateY(0px);
+    opacity: 1;
+   }
+   
+ .submitbtn  button:hover i:nth-child(1) {
+    transition-delay: 0.045s;
+   }
+   
+ .submitbtn  button:hover i:nth-child(2) {
+    transition-delay: calc(0.045s * 3);
+   }
+   
+ .submitbtn  button:hover i:nth-child(3) {
+    transition-delay: calc(0.045s * 4);
+   }
+   
+  .submitbtn button:hover i:nth-child(4) {
+    transition-delay: calc(0.045s * 5);
+   }
+   
+ .submitbtn  button:hover i:nth-child(6) {
+    transition-delay: calc(0.045s * 6);
+   }
+   
+ .submitbtn  button:hover i:nth-child(7) {
+    transition-delay: calc(0.045s * 7);
+   }
+   
+ .submitbtn  button:hover i:nth-child(8) {
+    transition-delay: calc(0.045s * 8);
+   }
+   
+ .submitbtn  button:hover i:nth-child(9) {
+    transition-delay: calc(0.045s * 9);
+   }
+   
+  .submitbtn button:hover i:nth-child(10) {
+    transition-delay: calc(0.045s * 10);
+   }
+
+.logoutbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0rem;
+    position: absolute;
+    right: 1rem;
+}
+.logoutbtn .Btn {
+    position: relative;
+    width: 120px;
+    height: 45px;
+    border-radius: 45px;
+    border: none;
+    background-color: rgb(151, 95, 255);
+    color: white;
+    box-shadow: 0px 10px 10px rgb(210, 187, 253) inset,
+    0px 5px 10px rgba(5, 5, 5, 0.212),
+    0px -10px 10px rgb(124, 54, 255) inset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+ .logoutbtn .Btn::before {
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(250, 250, 250, 0.678);
+    content: "";
+    filter: blur(1px);
+    top: 7px;
+    border-radius: 50%;
+  }
+  
+ .logoutbtn .Btn::after {
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(250, 250, 250, 0.137);
+    content: "";
+    filter: blur(1px);
+    bottom: 7px;
+    border-radius: 50%;
+  }
+  
+ .logoutbtn .Btn:hover {
+    animation: jello-horizontal 0.9s both;
+  }
+  
+  @keyframes jello-horizontal {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+  
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+  
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+  
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+  
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  .scrswpbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0rem;
+
+  }
+  .cssbuttons-io-button {
+    background: #a370f0;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+  }
+  
+  .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+    right: 0.3em;
+    transition: all 0.3s;
+  }
+  
+  .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+  }
+  
+  .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #7b52b9;
+  }
+  
+  .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+  }
+  
+  .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+  }
+.lovelink{
+    position: absolute;
+    left: 3rem;
+    background: rgba(0,0,0,0);
+    font-size: 2rem;
+    color: #FF1493;
+    text-decoration: none;
+    font-weight: 700;
+}
+.lovelink a{
+    background: rgba(0,0,0,0);
+    color: #FF1493;
+    position: relative;
+    margin-left: -15px;
+
+}
